@@ -1,0 +1,92 @@
+.faqSection {
+  padding: 95px 0;
+  background-color: var(--color-bg-alt);
+}
+
+.accordionWrap {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.accordionItem {
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  transition: all var(--transition-fast);
+}
+
+.accordionItem:hover {
+  border-color: var(--color-gold);
+}
+
+.itemOpen {
+  border-color: var(--color-gold) !important;
+  box-shadow: var(--shadow-sm);
+}
+
+.questionBtn {
+  width: 100%;
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  outline: none;
+}
+
+.questionText {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 1.35;
+}
+
+.qIcon {
+  color: var(--color-gold-dark);
+  flex-shrink: 0;
+}
+
+.chevron {
+  color: var(--color-gold-dark);
+  transition: transform var(--transition-normal);
+  flex-shrink: 0;
+}
+
+.chevronRotated {
+  transform: rotate(180deg);
+}
+
+.answerBox {
+  padding: 0 24px 22px 54px;
+  animation: slideUp 0.25s ease;
+}
+
+.answerText {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 640px) {
+  .questionBtn {
+    padding: 16px 18px;
+  }
+  .questionText {
+    font-size: 0.95rem;
+    gap: 8px;
+  }
+  .answerBox {
+    padding: 0 18px 18px 44px;
+  }
+}

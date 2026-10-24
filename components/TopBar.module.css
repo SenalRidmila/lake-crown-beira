@@ -1,0 +1,121 @@
+.topBar {
+  background-color: var(--color-primary-darker);
+  color: #d1dbd6;
+  font-size: 0.82rem;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(197, 157, 95, 0.2);
+  transition: all var(--transition-fast);
+  z-index: 95;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.contactItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #e4ece7;
+  transition: color var(--transition-fast);
+  text-decoration: none;
+}
+
+.contactItem:hover {
+  color: var(--color-gold-light);
+}
+
+.icon {
+  color: var(--color-gold);
+  flex-shrink: 0;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.currencySelector {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(197, 157, 95, 0.35);
+  border-radius: var(--radius-sm);
+  padding: 2px 8px;
+}
+
+.currencyIcon {
+  color: var(--color-gold);
+}
+
+.select {
+  background: transparent;
+  color: #f1ede5;
+  border: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+}
+
+.select option {
+  background: var(--color-primary-dark);
+  color: #ffffff;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.followText {
+  color: #9cb0a5;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.socialLink {
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  transition: all var(--transition-fast);
+}
+
+.socialLink:hover {
+  background: var(--color-gold);
+  color: var(--color-primary-dark);
+  transform: translateY(-1px);
+}
+
+.brandName {
+  font-size: 0.78rem;
+  color: #e4ece7;
+  font-weight: 500;
+  margin-left: 2px;
+}
+
+@media (max-width: 992px) {
+  .topBar {
+    display: none;
+  }
+}

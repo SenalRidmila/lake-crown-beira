@@ -1,0 +1,143 @@
+.mapSection {
+  padding: 95px 0;
+  background-color: var(--color-bg-alt);
+}
+
+.mapCard {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border);
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+}
+
+.infoCol {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.propertyBadge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.pinCircle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--color-primary-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(197, 157, 95, 0.4);
+}
+
+.pinIcon {
+  color: var(--color-primary-dark);
+}
+
+.propertyName {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  line-height: 1.2;
+}
+
+.address {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  margin-top: 2px;
+}
+
+.routesHeading {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gold-dark);
+  margin-bottom: 14px;
+}
+
+.routesList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.routeItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.routeIcon {
+  color: var(--color-primary);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.routeDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.routeName {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.routeMeta {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.buttonStack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.openMapBtn {
+  width: 100%;
+}
+
+.callHelpBtn {
+  width: 100%;
+}
+
+.mapIframeWrap {
+  width: 100%;
+  min-height: 420px;
+  background-color: #e5e3df;
+}
+
+.iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  border: none;
+}
+
+@media (max-width: 992px) {
+  .mapCard {
+    grid-template-columns: 1fr;
+  }
+  .infoCol {
+    padding: 28px;
+  }
+  .mapIframeWrap {
+    min-height: 320px;
+  }
+}

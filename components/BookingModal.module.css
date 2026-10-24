@@ -1,0 +1,403 @@
+.modalCard {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  max-width: 620px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 50px rgba(12, 38, 30, 0.25);
+  border: 1px solid var(--color-border);
+  position: relative;
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modalHeader {
+  padding: 22px 26px;
+  background: #0f2d24;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--color-gold);
+}
+
+.headerTitleWrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.crownEmblem {
+  font-size: 24px;
+}
+
+.modalHeading {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.modalSub {
+  font-size: 0.78rem;
+  color: var(--color-gold-light);
+}
+
+.closeBtn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #ffffff;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.closeBtn:hover {
+  background: var(--color-gold);
+  color: #0c261e;
+}
+
+.stepperBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  gap: 16px;
+}
+
+.stepIndicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+.stepIndicator span {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #e2dbce;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary-dark);
+}
+
+.stepActive {
+  color: var(--color-primary-dark);
+}
+
+.stepActive span {
+  background: var(--color-gold);
+  color: #0c261e;
+}
+
+.stepLine {
+  width: 32px;
+  height: 2px;
+  background: var(--color-border);
+}
+
+.errorBanner {
+  background: #fef2f2;
+  border-bottom: 1px solid #fecaca;
+  color: #b91c1c;
+  padding: 10px 24px;
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.modalBody {
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sectionLabel {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-gold-dark);
+}
+
+.roomsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.roomRadioCard {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background: var(--color-bg);
+}
+
+.roomRadioCard:hover {
+  border-color: var(--color-gold);
+}
+
+.roomSelected {
+  background: #ffffff;
+  border-color: var(--color-gold) !important;
+  box-shadow: 0 0 0 2px rgba(197, 157, 95, 0.25);
+}
+
+.radioInput {
+  accent-color: var(--color-primary-dark);
+}
+
+.roomRadioContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.roomRadioName {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+.roomRadioPrice {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-gold-dark);
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inputLabel {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.modalInput,
+.modalSelect,
+.modalTextarea {
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  outline: none;
+  background: var(--color-bg);
+  transition: border-color var(--transition-fast);
+}
+
+.modalInput:focus,
+.modalSelect:focus,
+.modalTextarea:focus {
+  border-color: var(--color-gold);
+  background: #ffffff;
+}
+
+.nightsBadge {
+  padding: 10px 12px;
+  background: var(--color-primary-soft);
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--color-primary-dark);
+  text-align: center;
+}
+
+.addOnsBox {
+  background: var(--color-bg);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid var(--color-border-light);
+}
+
+.addOnItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.addOnItem input {
+  margin-top: 3px;
+  accent-color: var(--color-primary-dark);
+}
+
+.addOnText {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.addOnText small {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-weight: normal;
+}
+
+.summaryBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  border-top: 1px solid var(--color-border);
+}
+
+.summaryTotalLabel {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  display: block;
+}
+
+.summaryTotalPrice {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-gold-dark);
+}
+
+.currencyNote {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.securityNote {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: #10b981;
+  background: #ecfdf5;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+}
+
+.buttonRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+/* Confirmation */
+.confirmationState {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.confirmCheckCircle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #ecfdf5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.confirmCheckIcon {
+  color: #10b981;
+}
+
+.confirmHeading {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 6px;
+}
+
+.confirmRef {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 24px;
+}
+
+.confirmReceipt {
+  width: 100%;
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  padding: 18px 22px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+  border: 1px solid var(--color-border);
+}
+
+.receiptRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+}
+
+.receiptRow strong {
+  color: var(--color-text);
+}
+
+.receiptTotal {
+  color: var(--color-gold-dark) !important;
+  font-size: 1.15rem;
+}
+
+.receiptNote {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin-bottom: 22px;
+  line-height: 1.5;
+}
+
+.confirmActions {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+}

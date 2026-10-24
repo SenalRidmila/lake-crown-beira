@@ -1,0 +1,149 @@
+.attractionsSection {
+  padding: 95px 0;
+  background-color: var(--color-bg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.attractionCard {
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+}
+
+.attractionCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-gold);
+}
+
+.imageWrap {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #0c261e;
+}
+
+.spotImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.attractionCard:hover .spotImage {
+  transform: scale(1.08);
+}
+
+.spotType {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(12, 38, 30, 0.88);
+  backdrop-filter: blur(4px);
+  color: var(--color-gold-light);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  border: 1px solid rgba(197, 157, 95, 0.3);
+}
+
+.cardContent {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.badgeRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.distanceBadge,
+.timeBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  color: var(--color-text);
+}
+
+.badgeIcon {
+  color: var(--color-gold-dark);
+}
+
+.spotTitle {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  line-height: 1.3;
+  margin-bottom: 8px;
+  min-height: 48px;
+}
+
+.spotDescription {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+.directionsLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.directionsLink:hover {
+  color: var(--color-gold-dark);
+}
+
+.extIcon {
+  opacity: 0.6;
+}
+
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .spotTitle {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
